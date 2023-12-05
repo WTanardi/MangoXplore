@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Header() {
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -81,36 +80,54 @@ export default function Header() {
 
         {/* Navigation */}
         <nav>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            stroke-width='2'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            className='w-10 lg:hidden cursor-pointer'
-            onClick={toggleNav}
-          >
-            <line
-              x1='4'
-              x2='20'
-              y1='12'
-              y2='12'
-            />
-            <line
-              x1='4'
-              x2='20'
-              y1='6'
-              y2='6'
-            />
-            <line
-              x1='4'
-              x2='20'
-              y1='18'
-              y2='18'
-            />
-          </svg>
+          {!isOpen ? (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              className='w-10 lg:hidden cursor-pointer'
+              onClick={toggleNav}
+            >
+              <line
+                x1='4'
+                x2='20'
+                y1='12'
+                y2='12'
+              />
+              <line
+                x1='4'
+                x2='20'
+                y1='6'
+                y2='6'
+              />
+              <line
+                x1='4'
+                x2='20'
+                y1='18'
+                y2='18'
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              className='w-10 lg:hidden cursor-pointer'
+              onClick={toggleNav}
+            >
+              <path d='M18 6 6 18' />
+              <path d='m6 6 12 12' />
+            </svg>
+          )}
+
           <ul
             className={`lg:flex lg:gap-6 lg:items-center ${
               isOpen
