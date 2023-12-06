@@ -57,9 +57,9 @@ export default function Header() {
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='#7d7d7d'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
                 className='w-6 mx-4 my-3 absolute'
               >
                 <circle
@@ -86,9 +86,9 @@ export default function Header() {
               viewBox='0 0 24 24'
               fill='none'
               stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
               className='w-10 lg:hidden cursor-pointer'
               onClick={toggleNav}
             >
@@ -117,9 +117,9 @@ export default function Header() {
               viewBox='0 0 24 24'
               fill='none'
               stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
               className='w-10 lg:hidden cursor-pointer'
               onClick={toggleNav}
             >

@@ -1,13 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header';
+import CoursePreviewCard from '../components/CoursePreviewCard';
+
+const cardData = [
+  {
+    cardTitle: 'Front-end Development',
+    cardContent:
+      'Dive into the world of stunning user interfaces, interactive web apps, and pixel-perfect design',
+    cardImg: '/fecard.png',
+  },
+  {
+    cardTitle: 'Back-end Development',
+    cardContent:
+      'Explore databases, server logic, and scalability to create robust and efficient web applications.',
+    cardImg: '/becard.png',
+  },
+  {
+    cardTitle: 'API Development',
+    cardContent:
+      'Learn how to create and consume APIs, enabling your applications to communicate and integrate seamlessly',
+    cardImg: '/apicard.png',
+  },
+  {
+    cardTitle: 'Git & Github Mastery',
+    cardContent:
+      'Learn version control, collaboration, and best practices. Streamline your development workflow and work seamlessly in teams',
+    cardImg: '/gitcard.png',
+  },
+];
 ---
 
 <Layout title='Welcome to Astro.'>
+  <Header client:load />
   <main>
-    <Header client:load />
-    <h1 class='text-8xl'>Hello World</h1>
+    <!-- Hero -->
+    <section class="bg-cover bg-[url('/hero.png')] bg-center">
+      <div
+        class='w-full h-full bg-gradient-to-r from-black text-white px-8 py-16 max-lg:text-center flex flex-col gap-6'
+      >
+        <!-- Hero heading -->
+        <p class='text-3xl font-bold'>
+          Your Gateway to Web Development Mastery
+        </p>
+
+        <!-- Hero subheading -->
+        <p class='text-xs'>
+          Are you ready to embark on an exciting journey into the world of web
+          development? Look no further than MangoXplore, your ultimate
+          destination for mastering the art of web development.
+        </p>
+
+        <!-- Join us now button -->
+        <button
+          class='border-white text-black rounded-full px-6 py-2 bg-white self-center font-extrabold text-sm'
+        >
+          Join us now
+        </button>
+      </div>
+    </section>
+
+    <!-- Course preview -->
+    <section class='p-6'>
+      <!-- CP Heading -->
+      <p class='font-bold text-center text-3xl py-8'>Which path will you take?</p>
+
+      <!-- Path cards -->
+      <div class='flex flex-wrap justify-center gap-8'>
+        {
+          cardData.map((e, i) => (
+            <CoursePreviewCard
+              cardData={e}  
+              client:load
+            />
+          ))
+        }
+      </div>
+    </section>
   </main>
 </Layout>
 
