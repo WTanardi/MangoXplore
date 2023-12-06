@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
 import Paths from '../components/Paths';
-import '../styles/globals.css';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -42,7 +41,7 @@ import '../styles/globals.css';
       </p>
 
       <!-- Path cards -->
-      <Paths client:load/>
+      <Paths client:load />
     </section>
   </main>
 </Layout>
