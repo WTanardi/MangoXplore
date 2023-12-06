@@ -1,34 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
-import CoursePreviewCard from '../components/CoursePreviewCard';
-
-const cardData = [
-  {
-    cardTitle: 'Front-end Development',
-    cardContent:
-      'Dive into the world of stunning user interfaces, interactive web apps, and pixel-perfect design',
-    cardImg: '/fecard.png',
-  },
-  {
-    cardTitle: 'Back-end Development',
-    cardContent:
-      'Explore databases, server logic, and scalability to create robust and efficient web applications.',
-    cardImg: '/becard.png',
-  },
-  {
-    cardTitle: 'API Development',
-    cardContent:
-      'Learn how to create and consume APIs, enabling your applications to communicate and integrate seamlessly',
-    cardImg: '/apicard.png',
-  },
-  {
-    cardTitle: 'Git & Github Mastery',
-    cardContent:
-      'Learn version control, collaboration, and best practices. Streamline your development workflow and work seamlessly in teams',
-    cardImg: '/gitcard.png',
-  },
-];
+import Paths from '../components/Paths';
+import '../styles/globals.css';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -61,21 +35,14 @@ const cardData = [
     </section>
 
     <!-- Course preview -->
-    <section class='p-6'>
+    <section class='py-6'>
       <!-- CP Heading -->
-      <p class='font-bold text-center text-3xl py-8'>Which path will you take?</p>
+      <p class='font-bold text-center text-3xl py-8 px-6'>
+        Which path will you take?
+      </p>
 
       <!-- Path cards -->
-      <div class='flex flex-wrap justify-center gap-8'>
-        {
-          cardData.map((e, i) => (
-            <CoursePreviewCard
-              cardData={e}  
-              client:load
-            />
-          ))
-        }
-      </div>
+      <Paths client:load/>
     </section>
   </main>
 </Layout>
