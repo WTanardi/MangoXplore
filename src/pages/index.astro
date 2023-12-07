@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
 import Paths from '../components/Paths';
+import TestimonialCards from '@/components/TestimonialCards';
+import PartnerCards from '@/components/PartnerCards';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -42,6 +44,23 @@ import Paths from '../components/Paths';
 
       <!-- Path cards -->
       <Paths client:load />
+    </section>
+
+    <!-- Testimonials -->
+    <section class='pb-6'>
+      <!-- Testimonial heading -->
+      <p class='font-bold text-center text-3xl py-8 px-6'>
+        Hear from Our Satisfied Learners
+      </p>
+
+      <!-- Testimonial card -->
+      <TestimonialCards />
+
+      <!-- Partnerships -->
+      <p class='text-center text-xl py-8 px-6'>MangoXplore is trusted by</p>
+
+      <!-- Partners -->
+      <PartnerCards />
     </section>
   </main>
 </Layout>
