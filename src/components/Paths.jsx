@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import CourseCard from './CourseCard';
 
 export default function Paths() {
   const cardData = [
@@ -9,9 +10,9 @@ export default function Paths() {
       content:
         'Dive into the world of stunning user interfaces, interactive web apps, and pixel-perfect design',
       img: '/fecard.png',
-      classes: 6,
-      students: 251,
-      desc: 'Follow a curriculum designed by the best of the best, from industrial specialists to leading educators, ensuring you receive unparalleled expertise and guidance on your learning journey.',
+      classes: 8,
+      students: 320,
+      desc: 'Immerse yourself in a comprehensive curriculum crafted by industry leaders and educators. Receive unparalleled expertise and guidance on your journey to becoming a front-end developer.',
     },
     {
       id: 'bedev',
@@ -19,9 +20,9 @@ export default function Paths() {
       content:
         'Explore databases, server logic, and scalability to create robust and efficient web applications.',
       img: '/becard.png',
-      classes: 6,
-      students: 251,
-      desc: 'Follow a curriculum designed by the best of the best, from industrial specialists to leading educators, ensuring you receive unparalleled expertise and guidance on your learning journey.',
+      classes: 7,
+      students: 280,
+      desc: 'Master the intricacies of back-end development with a curriculum designed by industry specialists. Gain expertise in creating scalable and efficient web applications.',
     },
     {
       id: 'apidev',
@@ -30,8 +31,8 @@ export default function Paths() {
         'Learn how to create and consume APIs, enabling your applications to communicate and integrate seamlessly',
       img: '/apicard.png',
       classes: 6,
-      students: 251,
-      desc: 'Follow a curriculum designed by the best of the best, from industrial specialists to leading educators, ensuring you receive unparalleled expertise and guidance on your learning journey.',
+      students: 240,
+      desc: 'Delve into the world of API development with a curriculum crafted by leading educators and industry experts. Acquire the skills to enable seamless communication and integration in your applications.',
     },
     {
       id: 'gitdev',
@@ -39,9 +40,62 @@ export default function Paths() {
       content:
         'Learn version control, collaboration, and best practices. Streamline your development workflow and work seamlessly in teams',
       img: '/gitcard.png',
-      classes: 6,
-      students: 251,
-      desc: 'Follow a curriculum designed by the best of the best, from industrial specialists to leading educators, ensuring you receive unparalleled expertise and guidance on your learning journey.',
+      classes: 5,
+      students: 200,
+      desc: 'Master Git and GitHub with a curriculum designed by the best in the field. Streamline your development workflow, practice version control, and collaborate effectively in team environments.',
+    },
+  ];
+
+  const courseData = [
+    {
+      number: 1,
+      title: 'Learn the basics of web programming',
+      desc: 'Learn HTML and CSS, the basic building blocks of the web, and start crafting stunning and responsive websites that leave a lasting impression.',
+      img: '/courseprev1.png',
+      rating: 4.87,
+      hours: 45,
+      level: 'Beginner',
+      students: 141.4,
+    },
+    {
+      number: 2,
+      title: 'Introduction to JavaScript',
+      desc: 'Explore the fundamentals of JavaScript programming language and enhance your web development skills by adding dynamic and interactive features to your websites.',
+      img: '/courseprev2.png',
+      rating: 4.65,
+      hours: 30,
+      level: 'Intermediate',
+      students: 89.2,
+    },
+    {
+      number: 3,
+      title: 'Responsive Web Design with Bootstrap',
+      desc: 'Master the art of responsive web design using the Bootstrap framework. Create visually appealing and mobile-friendly websites with ease.',
+      img: '/courseprev3.png',
+      rating: 4.92,
+      hours: 50,
+      level: 'Intermediate',
+      students: 112.8,
+    },
+    {
+      number: 4,
+      title: 'Node.js for Backend Development',
+      desc: 'Dive into server-side development with Node.js. Learn how to build scalable and efficient backend applications using JavaScript.',
+      img: '/courseprev4.png',
+      rating: 4.75,
+      hours: 40,
+      level: 'Advanced',
+      students: 97.5,
+    },
+    {
+      number: 5,
+      title: 'React.js: Building User Interfaces',
+      desc: 'Build interactive and dynamic user interfaces with React.js. Explore the component-based architecture and create modern, efficient web applications.',
+      img: '/courseprev5.png',
+      rating: 4.88,
+      hours: 55,
+      level: 'Advanced',
+      students: 125.6,
     },
   ];
 
@@ -74,8 +128,9 @@ export default function Paths() {
           <TabsContent
             value={e.id}
             key={i}
+            className='w-full'
           >
-            <div className='flex p-8 m-4 bg-slate-100'>
+            <div className='flex max-lg:flex-wrap p-8 m-4 bg-slate-100'>
               <div className='text-left gap-2 flex flex-col'>
                 {/* Course title */}
                 <p className='text-2xl font-medium mb-1'> {e.title} </p>
@@ -118,12 +173,21 @@ export default function Paths() {
                 </div>
 
                 {/* Line */}
-                <div className='w-full border-[1px] border-slate-200'></div>
+                <div className='w-full border-2 border-slate-200'></div>
 
                 {/* Course description */}
                 <div className='py-6 text-sm'>{e.desc}</div>
               </div>
-              <div>{/* Course cards */}</div>
+
+              {/* Course cards */}
+              <div className='overflow-x-scroll flex gap-2 justify-start'>
+                {courseData.map((e, i) => (
+                  <CourseCard
+                    courseData={e}
+                    key={i}
+                  />
+                ))}
+              </div>
             </div>
           </TabsContent>
         ))}
