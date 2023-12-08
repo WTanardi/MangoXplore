@@ -5,7 +5,7 @@ export default function CourseCard({ courseData }) {
     <div className='flex flex-col bg-white border-[1px] border-slate-200 w-[300px] flex-none'>
       {/* Card img */}
       <div
-        className='bg-cover bg-center w-full h-96 self-center'
+        className='bg-cover bg-center w-full h-96 lg:h-72 self-center'
         style={{
           backgroundImage: `url(${courseData.img})`,
         }}
