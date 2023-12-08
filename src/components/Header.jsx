@@ -137,7 +137,9 @@ export default function Header() {
           >
             <li>Subscription</li>
             <li>Webinars</li>
-            <li>Courses</li>
+            <a href='/add_course'>
+              <li>Courses</li>
+            </a>
             <li
               className={`text-white bg-black px-4 py-1.5 rounded-full font-semibold`}
             >

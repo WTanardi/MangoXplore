@@ -17,11 +17,11 @@ export default function TestimonialCards() {
   ];
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex max-lg:flex-col gap-4'>
       {cards.map((e, i) => (
         <div
           key={i}
-          className='p-6 bg-stone-100 mx-8 rounded shadow-xl'
+          className='p-6 bg-stone-100 mx-8 rounded shadow-xl lg:w-1/2'
         >
           {/* Text */}
           <div className='flex gap-2 flex-col'>
