@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.USER-COURSE {
+    @apply flex flex-col h-[1993px] items-center gap-[23px] relative bg-white;
+  }
+  .USER-COURSE .frame {
+    @apply relative w-[1280px] h-[473px] bg-neutral-100;
+  }
+  .USER-COURSE .group {
+    @apply relative w-[870px] h-[239px] left-[72px] top-[155px];
+  }
+  .USER-COURSE .rectangle {
+    @apply absolute w-[245px] h-[239px] rounded-[15px] left-0 top-0;
+  }
+  .USER-COURSE .text-wrapper {
+    @apply absolute w-[590px] font-bold text-black text-[32px] tracking-[0] leading-[normal] left-[274px] top-2.5;
+    font-family: "Poppins-Bold", Helvetica;
+  }
+  .USER-COURSE .div {
+    @apply absolute w-[125px] font-bold text-[#00000080] text-xs tracking-[0] leading-[normal] left-[274px] top-[58px];
+    font-family: "Source Serif Pro-Bold", Helvetica;
+  }
+  .USER-COURSE .p {
+    @apply absolute w-[589px] font-medium text-black text-sm tracking-[0.28px] leading-[23.8px] left-[275px] top-[76px];
+    font-family: "Montserrat-Medium", Helvetica;
+  }
+  .USER-COURSE .div-wrapper {
+    @apply absolute w-[169px] h-[34px] bg-[#3cbef3] overflow-hidden rounded-[5px] left-[274px] top-[205px];
+  }
+  .USER-COURSE .text-wrapper-2 {
+    @apply absolute font-bold text-white text-xs text-center tracking-[0] leading-[normal] left-3.5 top-[9px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .frame-2 {
+    @apply absolute w-[169px] h-[34px] bg-[#ffa500] overflow-hidden rounded-[5px] left-[462px] top-[205px];
+  }
+  .USER-COURSE .text-wrapper-3 {
+    @apply absolute font-bold text-white text-xs text-center tracking-[0] leading-[normal] left-[50px] top-[9px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .frame-wrapper {
+    @apply relative w-[1184px] h-[1376px];
+  }
+  .USER-COURSE .frame-3 {
+    @apply inline-flex flex-col h-[1376px] items-center gap-10 relative;
+  }
+  .USER-COURSE .group-2 {
+    @apply relative w-[1186px] h-[314px] -mr-0.5;
+  }
+  .USER-COURSE .frame-4 {
+    @apply flex w-[1184px] items-start gap-4 absolute overflow-hidden overflow-x-scroll px-0 py-2.5 left-0 top-[49px];
+  }
+  .USER-COURSE .overlap-group-wrapper {
+    @apply relative w-[465px] h-[245px] overflow-hidden border rounded-[15px] border-solid border-[#00000040];
+  }
+  .USER-COURSE .overlap-group {
+    @apply relative w-[467px] h-[247px] bg-white border rounded-[15px] border-solid border-black -left-px -top-px;
+  }
+  .USER-COURSE .text-wrapper-4 {
+    @apply absolute font-bold text-black text-xl tracking-[0] leading-[normal] whitespace-nowrap left-6 top-[136px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-5 {
+    @apply absolute font-bold text-[#000000b2] text-[6px] tracking-[0] leading-[normal] whitespace-nowrap left-[370px] top-[143px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-6 {
+    @apply absolute font-bold text-[#000000b2] text-[6px] tracking-[0] leading-[normal] whitespace-nowrap left-[410px] top-[143px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-7 {
+    @apply w-[417px] font-normal text-[#00000099] text-[13px] absolute tracking-[0] leading-[normal] left-6 top-[170px];
+    font-family: "Inter-Regular", Helvetica;
+  }
+  .USER-COURSE .overlap {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .img {
+    @apply relative w-full h-full;
+  }
+  .USER-COURSE .ellipse {
+    @apply absolute w-2.5 h-2.5 bg-[#87ceeb] rounded-[5px] left-[390px] top-[143px];
+  }
+  .USER-COURSE .star {
+    @apply absolute w-[11px] h-[11px] left-[425px] top-[142px];
+  }
+  .USER-COURSE .img-wrapper {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .rectangle-2 {
+    @apply absolute w-[465px] h-[127px] left-0 top-0;
+  }
+  .USER-COURSE .text-wrapper-8 {
+    @apply absolute w-[284px] font-bold text-black text-[32px] tracking-[0] leading-[normal] left-0 top-0;
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .overlap-2 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .overlap-group-2 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .overlap-3 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .overlap-group-3 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .overlap-4 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .overlap-group-4 {
+    @apply absolute w-[465px] h-[127px] bg-[100%_100%] left-px top-px;
+  }
+  .USER-COURSE .NAVBAR-USER {
+    @apply absolute w-[1280px] h-[94px] left-0 top-0;
+  }
+  .label {
+    @apply w-[164px] h-[27px];
+  }
+  .label .text-wrapper {
+    @apply fixed font-normal text-black text-xl tracking-[0] leading-[normal] left-0 top-0;
+    font-family: "LEMON MILK-Regular", Helvetica;
+  }
+  .USER-COURSE .overlap-5 {
+    @apply relative h-[94px];
+  }
+  .USER-COURSE .NAVBAR-LOGIN {
+    @apply bg-white absolute w-[1280px] h-[94px] left-0 top-0;
+  }
+  .USER-COURSE .mango-xplore {
+    @apply absolute w-[164px] h-[27px] left-12 top-[34px];
+  }
+  .USER-COURSE .logo {
+    @apply absolute w-[350px] h-[50px] overflow-hidden border rounded-[50px] border-solid border-black left-[248px] top-[23px];
+  }
+  .USER-COURSE .frame-5 {
+    @apply absolute w-6 h-6 left-[21px] top-[13px];
+  }
+  .USER-COURSE .text-wrapper-9 {
+    @apply absolute font-normal text-[#7d7d7d] text-base tracking-[0] leading-[normal] whitespace-nowrap left-14 top-4;
+    font-family: "Helvetica Neue-Regular", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-10 {
+    @apply absolute font-normal text-black text-base tracking-[0] leading-[normal] whitespace-nowrap left-[1065px] top-[37px];
+    font-family: "Inter-Regular", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-11 {
+    @apply absolute font-normal text-black text-base tracking-[0] leading-[normal] whitespace-nowrap left-[851px] top-[37px];
+    font-family: "Inter-Regular", Helvetica;
+  }
+  .USER-COURSE .text-wrapper-12 {
+    @apply absolute font-normal text-black text-base tracking-[0] leading-[normal] whitespace-nowrap left-[970px] top-[37px];
+    font-family: "Inter-Regular", Helvetica;
+  }
+  .USER-COURSE .vector-wrapper {
+    @apply absolute w-8 h-8 bg-[#1e1e1e] rounded-2xl left-[1151px] top-8;
+  }
+  .USER-COURSE .vector {
+    @apply absolute w-5 h-5 left-1.5 top-2;
+  }
+  .USER-COURSE .text-wrapper-13 {
+    @apply absolute font-bold text-black text-base tracking-[0] leading-[normal] whitespace-nowrap left-[1188px] top-[37px];
+    font-family: "Inter-Bold", Helvetica;
+  }
+  .USER-COURSE .FOOTER {
+    @apply relative self-stretch w-full h-[97px] bg-white;
+  }
+  .USER-COURSE .overlap-6 {
+    @apply relative w-[1280px] h-[102px];
+  }
+  .USER-COURSE .line {
+    @apply absolute w-[1184px] h-px object-cover left-[50px] top-0;
+  }
+  .USER-COURSE .group-3 {
+    @apply absolute w-[1280px] h-[102px] left-0 top-0;
+  }
+  .USER-COURSE .group-4 {
+    @apply absolute w-[276px] h-9 left-[502px] top-[18px];
+  }
+  .USER-COURSE .group-5 {
+    @apply absolute w-[1282px] h-[30px] left-0 top-[72px];
+  }
+  .USER-COURSE .overlap-group-5 {
+    @apply relative w-[1280px] h-[30px] bg-[#2f2f2f];
+  }
+  .USER-COURSE .text-wrapper-14 {
+    @apply absolute font-normal text-white text-xs text-center tracking-[0] leading-[normal] left-[535px] top-[7px];
+    font-family: "LEMON MILK-Regular", Helvetica;
+  }
+  
