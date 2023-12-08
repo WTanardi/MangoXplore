@@ -25,7 +25,7 @@ export default function PartnerCards() {
           <img
             src={e}
             alt=''
-            className='w-20'
+            className='max-lg:w-20'
           />
         </div>
       ))}

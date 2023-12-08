@@ -113,13 +113,13 @@ export default function Paths() {
             >
               <div className='lg:hidden'>{e.title}</div>
               <div
-                className='w-64 h-64 rounded-xl bg-slate-700 flex flex-col text-center justify-center gap-2 p-6 text-white max-lg:hidden'
+                className='w-64 h-64 rounded-xl bg-slate-700 flex flex-col text-center justify-center gap-2 p-6 text-white max-lg:hidden whitespace-normal'
                 style={{
                   backgroundImage: `url(${e.img})`,
                 }}
               >
                 <p className='font-bold text-3xl'> {e.title} </p>
-                <p className='text-xs'> {e.content} </p>
+                <p className='text-xs font-light'> {e.content} </p>
               </div>
             </TabsTrigger>
           ))}
@@ -130,19 +130,22 @@ export default function Paths() {
             key={i}
             className='w-full'
           >
-            <div className='flex max-lg:flex-wrap p-8 m-4 bg-slate-100'>
-              <div className='text-left gap-2 flex flex-col'>
+            <div className='flex max-lg:flex-wrap p-8 m-4 bg-slate-100 gap-8'>
+              <div className='text-left gap-2 lg:gap-4 flex flex-col justify-center'>
                 {/* Course title */}
-                <p className='text-2xl font-medium mb-1'> {e.title} </p>
+                <p className='text-2xl font-medium mb-1 lg:text-5xl'>
+                  {' '}
+                  {e.title}{' '}
+                </p>
 
                 {/* Course classes */}
-                <div className='text-sm flex gap-2'>
+                <div className='text-sm flex gap-2 lg:text-xl'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 24 24'
                     fill='none'
                     stroke='currentColor'
-                    className='w-5'
+                    className='w-5 lg:w-8'
                   >
                     <path d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20' />
                   </svg>
@@ -150,15 +153,13 @@ export default function Paths() {
                 </div>
 
                 {/* Course students */}
-                <div className='text-sm flex gap-2'>
+                <div className='text-sm flex gap-2 lg:text-xl'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
                     viewBox='0 0 24 24'
                     fill='none'
                     stroke='currentColor'
-                    className='w-5'
+                    className='w-5 lg:w-8'
                   >
                     <path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2' />
                     <circle
@@ -176,7 +177,7 @@ export default function Paths() {
                 <div className='w-full border-2 border-slate-200'></div>
 
                 {/* Course description */}
-                <div className='py-6 text-sm'>{e.desc}</div>
+                <div className='py-6 text-sm lg:text-base'>{e.desc}</div>
               </div>
 
               {/* Course cards */}
