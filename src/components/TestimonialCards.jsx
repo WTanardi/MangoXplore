@@ -21,7 +21,7 @@ export default function TestimonialCards() {
       {cards.map((e, i) => (
         <div
           key={i}
-          className='p-6 bg-stone-100 mx-8 rounded shadow-xl lg:w-1/2'
+          className='p-6 bg-stone-100 mx-8 xl:mx-16 rounded shadow-xl lg:w-1/2'
         >
           {/* Text */}
           <div className='flex gap-2 flex-col'>
@@ -34,11 +34,11 @@ export default function TestimonialCards() {
                 }}
               ></div>
               <div>
-                <p className='text-3xl font-medium'> {e.name} </p>
-                <p className='text-sm '> {e.position} </p>
+                <p className='text-3xl xl:text-4xl font-medium'> {e.name} </p>
+                <p className='text-sm xl:text-xl'> {e.position} </p>
               </div>
             </div>
-            <p className='text-xs text-justify'> {e.desc} </p>
+            <p className='text-xs xl:text-sm text-justify'> {e.desc} </p>
           </div>
         </div>
       ))}

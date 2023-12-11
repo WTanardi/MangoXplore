@@ -103,9 +103,9 @@ export default function Paths() {
     <div>
       <Tabs
         defaultValue={cardData[0].id}
-        className='flex flex-col justify-center items-center w-full h-full'
+        className='flex flex-col justify-center items-center w-full h-full lg:px-8'
       >
-        <TabsList className='overflow-x-scroll justify-start gap-2 py-4 w-full h-full'>
+        <TabsList className='overflow-x-scroll justify-start md:max-lg:justify-center md:max-lg:overflow-auto xl:overflow-auto gap-2 py-4 w-full h-full xl:justify-center lg:bg-transparent'>
           {cardData.map((e, i) => (
             <TabsTrigger
               key={i}
@@ -113,13 +113,13 @@ export default function Paths() {
             >
               <div className='lg:hidden'>{e.title}</div>
               <div
-                className='w-64 h-64 rounded-xl bg-slate-700 flex flex-col text-center justify-center gap-2 p-6 text-white max-lg:hidden whitespace-normal'
+                className='w-64 h-64 xl:w-96 xl:h-96 rounded-xl bg-slate-700 flex flex-col text-center justify-center gap-2 p-6 text-white max-lg:hidden whitespace-normal bg-cover bg-center'
                 style={{
                   backgroundImage: `url(${e.img})`,
                 }}
               >
-                <p className='font-bold text-3xl'> {e.title} </p>
-                <p className='text-xs font-light'> {e.content} </p>
+                <p className='font-bold text-3xl xl:text-5xl'> {e.title} </p>
+                <p className='text-xs xl:text-base font-light'> {e.content} </p>
               </div>
             </TabsTrigger>
           ))}
