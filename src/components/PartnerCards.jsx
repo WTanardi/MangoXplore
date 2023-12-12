@@ -16,7 +16,7 @@ export default function PartnerCards() {
     '/mbkm.png',
   ];
   return (
-    <div className='flex flex-wrap justify-evenly gap-4 lg:gap-8 px-32 xl:px-64'>
+    <div className='flex flex-wrap justify-evenly gap-4 lg:gap-8 lg:px-32 2xl:px-64'>
       {partners.map((e, i) => (
         <div
           className='lg:h-24 lg:w-64 h-16 w-40 border-[1px] border-black flex items-center justify-center'

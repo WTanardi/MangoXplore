@@ -2,39 +2,145 @@
 import Layout from '../layouts/Layout.astro';
 import UserCourseCard from '@/components/UserCourseCard';
 import Header from '../components/Header';
+import CourseEpisode from '@/components/CourseEpisode';
 const Title = 'User Course Page';
-import '../styles/user_course.css';
 
-const cardData = [
+const moduleData = [
   {
-    title: 'HTML Basics',
-    desc: 'Learn the fundamentals of HTML for structuring web content.',
-    hour: 2,
-    rating: 4.7,
+    HTML: [
+      {
+        title: 'HTML Basics',
+        desc: 'Learn the fundamentals of HTML for structuring web content.',
+        hour: 2,
+        rating: 4.7,
+      },
+      {
+        title: 'HTML Forms',
+        desc: 'Explore how to create forms using HTML for user input.',
+        hour: 3,
+        rating: 4.5,
+      },
+      {
+        title: 'HTML Semantics',
+        desc: 'Understand the semantic elements in HTML for better document structure.',
+        hour: 2.5,
+        rating: 4.8,
+      },
+      {
+        title: 'HTML5 Features',
+        desc: 'Discover the new features introduced in HTML5 for modern web development.',
+        hour: 3.5,
+        rating: 4.6,
+      },
+      {
+        title: 'Accessibility in HTML',
+        desc: 'Learn how to make your HTML content accessible to all users.',
+        hour: 2,
+        rating: 4.9,
+      },
+    ],
   },
   {
-    title: 'CSS Styling',
-    desc: 'Master the art of styling web pages with CSS for a polished look.',
-    hour: 3,
-    rating: 4.5,
+    CSS: [
+      {
+        title: 'CSS Styling',
+        desc: 'Learn to style your HTML content using CSS for a visually appealing layout.',
+        hour: 4,
+        rating: 4.8,
+      },
+      {
+        title: 'CSS Flexbox',
+        desc: 'Explore the flexbox layout model in CSS for efficient page design.',
+        hour: 3.5,
+        rating: 4.7,
+      },
+      {
+        title: 'CSS Grid',
+        desc: 'Understand the CSS grid layout for creating complex and responsive designs.',
+        hour: 4.5,
+        rating: 4.6,
+      },
+      {
+        title: 'CSS Transitions',
+        desc: 'Learn how to create smooth transitions and animations with CSS.',
+        hour: 3,
+        rating: 4.9,
+      },
+      {
+        title: 'Advanced CSS Selectors',
+        desc: 'Explore advanced CSS selectors for precise targeting of elements.',
+        hour: 2.5,
+        rating: 4.5,
+      },
+    ],
   },
   {
-    title: 'JavaScript Fundamentals',
-    desc: 'Explore the basics of JavaScript to make your web pages dynamic.',
-    hour: 4,
-    rating: 4.3,
+    JavaScript: [
+      {
+        title: 'JavaScript Basics',
+        desc: 'Introduction to the basics of JavaScript for adding interactivity.',
+        hour: 5,
+        rating: 4.9,
+      },
+      {
+        title: 'DOM Manipulation',
+        desc: 'Learn how to manipulate the Document Object Model (DOM) with JavaScript.',
+        hour: 4,
+        rating: 4.7,
+      },
+      {
+        title: 'JavaScript Functions',
+        desc: 'Explore the concept of functions in JavaScript for code organization.',
+        hour: 3,
+        rating: 4.6,
+      },
+      {
+        title: 'Asynchronous JavaScript',
+        desc: 'Understand asynchronous programming with JavaScript and promises.',
+        hour: 4.5,
+        rating: 4.8,
+      },
+      {
+        title: 'ES6+ Features',
+        desc: 'Discover the features introduced in ECMAScript 6 (ES6) and later versions.',
+        hour: 3.5,
+        rating: 4.5,
+      },
+    ],
   },
   {
-    title: 'Responsive Web Design',
-    desc: 'Create websites that adapt to different devices and screen sizes.',
-    hour: 3.5,
-    rating: 4.6,
-  },
-  {
-    title: 'Intro to Frameworks',
-    desc: 'Discover the power of web development frameworks like React or Angular.',
-    hour: 5,
-    rating: 4.8,
+    React: [
+      {
+        title: 'Introduction to React',
+        desc: 'Get started with React, a popular JavaScript library for building user interfaces.',
+        hour: 5,
+        rating: 4.8,
+      },
+      {
+        title: 'React Components',
+        desc: 'Learn about React components and their role in building modular UIs.',
+        hour: 4,
+        rating: 4.7,
+      },
+      {
+        title: 'State and Props',
+        desc: 'Understand the concepts of state and props in React for dynamic UIs.',
+        hour: 3.5,
+        rating: 4.9,
+      },
+      {
+        title: 'React Router',
+        desc: 'Explore React Router for adding navigation to your React applications.',
+        hour: 3,
+        rating: 4.6,
+      },
+      {
+        title: 'Redux Basics',
+        desc: 'Introduction to state management in React with Redux.',
+        hour: 4,
+        rating: 4.5,
+      },
+    ],
   },
 ];
 ---
@@ -42,18 +148,18 @@ const cardData = [
 <Layout title={Title}>
   <main>
     <Header client:load />
-    <div class='flex flex-col gap-6 relative bg-white'>
+    <div class='flex flex-col relative bg-white'>
       <!-- Hero -->
       <div class='bg-neutral-100'>
-        <div class='flex flex-col p-8 gap-2'>
+        <div class='flex max-md:flex-col p-8 gap-2 md:gap-8'>
           <div
-            class='w-full lg:w-[245px] h-[239px] rounded-xl bg-cover bg-center'
+            class='w-full h-60 rounded-xl bg-cover bg-center'
             style={{
               backgroundImage: `url(fecard.png)`,
             }}
           >
           </div>
-          <div class='flex flex-col gap-2'>
+          <div class='flex flex-col gap-2 justify-evenly'>
             <div
               class='font-bold text-black text-3xl tracking-0 leading-normal'
             >
@@ -90,15 +196,8 @@ const cardData = [
         </div>
       </div>
 
-      <!-- Course Episode HTML -->
-      <div class='p-8'>
-        <!-- Episode Header -->
-        <p class='text-4xl font-bold text-left pb-4'>HTML</p>
-
-        <div class='overflow-x-scroll flex gap-4'>
-          {cardData.map((e, i) => <UserCourseCard {...e} />)}
-        </div>
-      </div>
+      <!-- Course Episodes -->
+      <CourseEpisode moduleData={moduleData} />
     </div>
   </main>
 </Layout>

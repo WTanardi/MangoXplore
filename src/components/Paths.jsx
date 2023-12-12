@@ -105,7 +105,7 @@ export default function Paths() {
         defaultValue={cardData[0].id}
         className='flex flex-col justify-center items-center w-full h-full lg:px-8'
       >
-        <TabsList className='overflow-x-scroll justify-start md:max-lg:justify-center md:max-lg:overflow-auto xl:overflow-auto gap-2 py-4 w-full h-full xl:justify-center lg:bg-transparent'>
+        <TabsList className='overflow-x-scroll justify-start md:max-lg:justify-center md:max-lg:overflow-auto 2xl:overflow-auto gap-2 py-4 w-full h-full lg:bg-transparent 2xl:justify-center'>
           {cardData.map((e, i) => (
             <TabsTrigger
               key={i}
