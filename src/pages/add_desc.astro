@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+
+const title = 'Add Video Page';
+---
+<Layout title={title}>
+    <main>
+        <Header client:load />
+        <div>
+          <!-- Title -->
+        <div class='flex flex-col'>
+            <h2 class="text-black text-4xl font-bold font-['Poppins'] py-2">
+              Edit Course
+            </h2>
+            <p class="text-black text-lg font-normal font-['Montserrat']">
+              Select Existing Course
+            </p>
+          </div>
+        </div>
+    </main>
+</Layout>
