@@ -57,11 +57,13 @@ export default function DescComponent({ data }) {
       {/*  */}
       <div className='flex flex-wrap flex-row justify-center gap-4 py-8'>
         {BoxData.map((e, i) => (
-          <div className='bg-gray-900 rounded-md px-16 py-4 flex h-40 w-88 flex-shrink-0'>
-            <p className='w-full font-semibold text-white text-2xl text-center my-auto'>
-              {e.name}
-            </p>
-          </div>
+          <a href='/add_video'>
+            <div className='bg-gray-900 rounded-md px-16 py-4 flex h-40 w-88 flex-shrink-0'>
+              <p className='w-full font-semibold text-white text-2xl text-center my-auto'>
+                {e.name}
+              </p>
+            </div>
+          </a>
         ))}
       </div>
       {/*  */}
