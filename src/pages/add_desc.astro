@@ -104,8 +104,61 @@ const descData = [
         <div class='flex flex-col'>
           {descData.map((e, i) => <DescComponent data={e} />)}
         </div>
+        <!-- Add new -->
+        <div
+          class='border-2 border-black rounded-lg mt-8 mb-4 mx-16 flex flex-col'
+        >
+          <div class='flex justify-between items-center w-full px-4 py-4'>
+            <div class='flex'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                class='w-5'
+              >
+                <path d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z'
+                ></path>
+                <path d='m15 5 4 4'></path>
+              </svg>
+              <p class='text-2xl font-bold ml-2'>Modul 1</p>
+            </div>
+            <div>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                class='w-6'
+              >
+                <path d='m18 15-6-6-6 6'></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class='flex ml-32 pb-4 gap-2'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            class='w-6'
+          >
+            <circle
+              cx='12'
+              cy='12'
+              r='10'
+            ></circle>
+            <path d='M8 12h8'></path>
+            <path d='M12 8v8'></path>
+          </svg>
+          <p class='text-xl font-medium'>New</p>
+        </div>
       </div>
     </div>
   </main>
-  <Footer />
 </Layout>
+<Footer />
