@@ -1,15 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
+import DescComponent from '@/components/DescComponent';
+import Footer from '@/components/Footer';
 
 const title = 'Add Description Page';
+
+const descData = [
+  {
+    title: 'HTML',
+  },
+  {
+    title: 'CSS',
+  },
+  {
+    title: 'Javascript',
+  },
+];
 ---
+
 <Layout title={title}>
   <main>
     <Header client:load />
-    <div>
+    <div class='bg-sky-100 px-8 lg:px-32 py-12'>
       <!-- Title -->
-      <div class='flex flex-col border-2'>
+      <div class='flex flex-col pb-12'>
         <h2 class="text-black text-4xl font-bold font-['Poppins'] py-2">
           Edit Course
         </h2>
@@ -17,44 +32,80 @@ const title = 'Add Description Page';
           Select Existing Course
         </p>
       </div>
-      <!-- Simpan Button -->
-      <div class='border-2 mx-4'>
-        <div class='w-fit border-4 rounded-md flex my-4 p-4 ml-auto'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save-all"><path d="M6 4a2 2 0 0 1 2-2h10l4 4v10.2a2 2 0 0 1-2 1.8H8a2 2 0 0 1-2-2Z"/><path d="M10 2v4h6"/><path d="M18 18v-7h-8v7"/><path d="M18 22H4a2 2 0 0 1-2-2V6"/></svg>
-          <h1 class='font-semibold '>Simpan </h1>
+      <!-- Big box -->
+      <div class='border-2 border-black r ounded-xl mx-4 bg-white'>
+        <!-- Simpan Button -->
+        <div
+          class='w-fit border-2 border-black rounded-md flex my-4 p-2 mr-4 ml-auto'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            class='w-5'
+            ><path
+              d='M6 4a2 2 0 0 1 2-2h10l4 4v10.2a2 2 0 0 1-2 1.8H8a2 2 0 0 1-2-2Z'
+            ></path><path d='M10 2v4h6'></path><path d='M18 18v-7h-8v7'
+            ></path><path d='M18 22H4a2 2 0 0 1-2-2V6'></path></svg
+          >
+          <h1 class='font-semibold'>Simpan</h1>
         </div>
+        <!-- HR -->
+        <div class='w-[99%] h-[1px] bg-black mx-auto'></div>
         <!-- Desc materi -->
-        <div class='border-2 px-10 py-4'>
+        <div
+          class='border-2 border-black rounded-lg px-10 py-4 my-8 mx-16 flex'
+        >
           <div class='w-full bg-black h-40 lg:h-80 rounded-xl'></div>
           <div class='lg:mx-24'>
-            <div class="flex items-center mt-4 " >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-              <h1 class='font-extrabold text-xl ml-2 lg:my-4'>
+            <div class='flex items-center mt-4'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                class='w-5'
+                ><path d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z'
+                ></path><path d='m15 5 4 4'></path></svg
+              >
+              <h1 class='font-extrabold text-5xl ml-2 lg:my-4'>
                 Frontend Development
               </h1>
             </div>
-            <div class='lg:w-full'>
-              <p class='mt-2 text-justify'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Sollicitudin ac orci phasellus egestas tellus rutrum. Elit
-                scelerisque mauris pellentesque pulvinar pellentesque habitant
-                morbi tristique senectus. Gravida neque convallis a cras semper
-                auctor.
-              </p>
+            <p class='ml-8'>5 Materi</p>
+            <div class='flex'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                class='w-20 mb-14'
+                ><path d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z'
+                ></path><path d='m15 5 4 4'></path></svg
+              >
+              <div class='ml-2'>
+                <p class='mt-2 text-justify font-semibold'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Sollicitudin ac orci phasellus egestas tellus rutrum. Elit
+                  scelerisque mauris pellentesque pulvinar pellentesque habitant
+                  morbi tristique senectus. Gravida neque convallis a cras
+                  semper auctor.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Edit materi -->
-      <div class='border-2'>
-        <div class='border-4'>
-          <p>HTML</p>
-          <div class='w-fit bg-gray-900 rounded-md p-4 flex my-4'>
-            <h1 class='font-semibold text-white'>Download Modul</h1>
-          </div>
+        <!-- Edit materi -->
+        <div class='flex flex-col'>
+          {descData.map((e, i) => <DescComponent data={e} />)}
         </div>
       </div>
     </div>
   </main>
+  <Footer />
 </Layout>

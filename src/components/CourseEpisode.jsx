@@ -13,17 +13,19 @@ export default function CourseEpisode({ moduleData }) {
             {Object.keys(module)[0]}
           </p>
 
-          <div class='overflow-x-scroll flex gap-4 max-h-full'>
-            {module[Object.keys(module)[0]].map((course, i) => (
-              <UserCourseCard
-                key={i}
-                title={course.title}
-                desc={course.desc}
-                hour={course.hour}
-                rating={course.rating}
-              />
-            ))}
-          </div>
+          <a href='/add_video'>
+            <div class='overflow-x-scroll flex gap-4 max-h-full'>
+              {module[Object.keys(module)[0]].map((course, i) => (
+                <UserCourseCard
+                  key={i}
+                  title={course.title}
+                  desc={course.desc}
+                  hour={course.hour}
+                  rating={course.rating}
+                />
+              ))}
+            </div>
+          </a>
         </div>
       ))}
     </>
